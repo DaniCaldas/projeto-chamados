@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Procurar Chamado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            div {
+                background: #ffffff;
+                padding: 20px 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            select, input[type="text"], input[type="submit"] {
+                padding: 10px;
+                border: 1px solid #cccccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            select {
+                background-color: #f9f9f9;
+            }
+
+            input[type="submit"] {
+                background-color: #007bff;
+                color: #ffffff;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+            input:focus, select:focus {
+                outline: none;
+                border-color: #007bff;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <form action="procurar.jsp" method="POST">
+                <label for="opcao">Escolha uma opção:</label>
+                <select name="opcao" id="opcao">
+                    <option value="id">ID</option>
+                    <option value="responsavel">Responsável</option>
+                    <option value="titulo">Título</option>
+                </select>
+
+                <label for="valor">Digite o título:</label>
+                <input type="text" id="valor" name="valor" placeholder="Digite aqui">
+
+                <input type="submit" value="Procurar">
+            </form>
+        </div>
+    </body>
+</html>
